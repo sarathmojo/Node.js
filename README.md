@@ -40,3 +40,26 @@ Advantages of Node.js
 ---------------------
 **Savings in I/O cost (i.e., high performance):**
 Because of the architecture, Node.js provides high performance like Nginx server as shown below. (As a side note: Nginx uses evented, non-blocking architecture, where as Apache uses multi-threaded architecture. Nginx doesn’t use Node.js, this is just an architecture comparison).
+![NPM](http://blog.cloudfoundry.org/wp-content/uploads/2012/04/Screen-Shot-2012-04-24-at-3.31.58-PM.png)
+
+**Savings in Memory:**
+Savings in Memory: Again, because of the architecture, Node.js uses relatively very little memory much like Nginx server as shown below.
+![NPM](http://blog.cloudfoundry.org/wp-content/uploads/2012/04/Screen-Shot-2012-04-24-at-3.34.07-PM.png)
+
+**JavaScript:**
+Node.js uses a familiar and very popular language–JavaScript–and allows engineers to use a single language for both client and server.
+
+**Thousands of libraries:**
+High performance and a familiar language is great, but you really need libraries to get started. Although Node.js is relatively new, it already has nearly 11,000 libraries.
+
+Disadvantages of Node.js
+------------------------
+* Node.js libraries are developed actively with a high rate of change. There are newer versions of libraries literally every month. This can cause version issues and instabilities. Npm shrinkwrap and package.json were introduced a while back to set up standards, but the issue still exists.
+
+* Still many libraries, such as the SAML auth library which is required for enterprise apps, are not available yet.
+
+* The whole callback, event-driven, functional programming aspects of Node.js can add a learning curve burden to server-side programmers of other object-oriented languages. (Note, there are several libraries to help overcome this. One example is async. In addition, developers can also use CoffeeScript which compiles to JavaScript to help with learning curve).
+
+* Asynchronous and event-driven code inherently adds more complexity to the code versus a synchronous code.
+
+* JavaScript has more than its share of “bad parts” and might throw off engineers and newcomers. (Side note: Read some good JavaScript books like: JavaScript: The Good Parts if you are a newcomer.)
