@@ -2,18 +2,18 @@ What is Node.js?
 ----------------
 **Official definition:** Node.js is a platform built on Chrome’s JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 
-**Simple definition:** A platform that makes writing powerful C/C++ server-side apps easy by essentially wrapping them in JavaScript.
+**Simple definition:** A platform that makes writing powerful C/C++ server-side apps, easy by wrapping them in JavaScript.
 
 Node.js under the hood?
 -----------------------
 ![NPM](http://blog.cloudfoundry.org/wp-content/uploads/2012/04/Screen-Shot-2012-04-24-at-5.40.33-PM.png)
 
-While at a first glance, perhaps because of the name Node.js, it might feel like it is built using JavaScript, but it is not. It simply runs JavaScript on the server. It is about 80 percent C/C++ code and about 20 percent JavaScript code. The C/C++ libraries are responsible for running JavaScript (via Google Chrome V8 JS engine) and providing support for HTTP, DNS, and TCP, etc.,–important server-side functionalities. The proportionally smaller JavaScript code mostly consists of libraries or modules to help make server-side developers’ lives a lot simpler.
+Perhaps because of the name Node.js, it might feel like it is built using JavaScript, but it is not. It simply runs JavaScript on the server. It is about 80 percent C/C++ code and about 20 percent JavaScript code. The C/C++ libraries are responsible for running JavaScript (via Google Chrome V8 JS engine) and providing support for HTTP, DNS, and TCP, etc.,–important server-side functionalities. The proportionally smaller JavaScript code mostly consists of libraries or modules to help server-side developers to code.
 
 **Chrome V8 Engine:**
-Chrome V8 Engine is Google’s open source, C++ based JavaScript engine that actually runs JavaScript. The Node.js team took this C++ code and added other important libraries like TCP, HTTP and DNS to create Node.js. This is the same engine that is also embedded in the Google Chrome browser that runs JavaScript in the browser as well. This is not yet-another-JavaScript-engine but one that uses innovative techniques like “Hidden Class Transitions,” “JS to Machine Code compilation” and “Automatic GC” to make it one of the fastest JavaScript engines.
+Chrome V8 Engine is Google’s open source, C++ based JavaScript engine that actually runs JavaScript. The Node.js team took this C++ code and added other important libraries like TCP, HTTP and DNS to create Node.js. This is the same engine that is also embedded in the Google Chrome browser that runs JavaScript in the browser as well. This is not yet-another-JavaScript-engine but one that uses innovative techniques like “*Hidden Class Transitions*,” “*JS to Machine Code compilation*” and “*Automatic GC*” to make it one of the fastest JavaScript engines.
 
-**Asynchronous I/O and Evented Support (C/C++):**
+**Asynchronous I/O and Event Support (C/C++):**
 In order to write a fast and scalable server application, we typically end up writing it in a multi-threaded fashion. While you can build great multi-threaded apps in many languages, it usually requires a lot of expertise to build them correctly. On the other hand, these libraries (along with Chrome’s V8 engine) provide a different architecture that hides the complexities of multi-threaded apps while getting the same or better benefits.
 
 **Multi-threaded HTTP server, Blocking I/O:**
