@@ -16,7 +16,7 @@ Chrome V8 Engine is Google’s open source, C++ based JavaScript engine that act
 **Asynchronous I/O and Evented Support (C/C++):**
 In order to write a fast and scalable server application, we typically end up writing it in a multi-threaded fashion. While you can build great multi-threaded apps in many languages, it usually requires a lot of expertise to build them correctly. On the other hand, these libraries (along with Chrome’s V8 engine) provide a different architecture that hides the complexities of multi-threaded apps while getting the same or better benefits.
 
-**Multi-threaded HTTP server, Blocking I/O**
+**Multi-threaded HTTP server, Blocking I/O:**
 ![NPM](http://blog.cloudfoundry.org/wp-content/uploads/2012/04/multiThreadedServer.png)
 
 The above diagram depicts a simplified multi-threaded server. There are four users logging into the multi-threaded server. A couple of the users are hitting refresh buttons causing it to use lot of threads. When a request comes in, one of the threads in the thread pool performs that operation, say, a blocking I/O operation. This triggers the OS to perform context switching and run other threads in the thread pool. And after some time, when the I/O is finished, the OS context switches back to the earlier thread to return the result.
@@ -35,3 +35,8 @@ And at some point when the response comes back from a database or file system, t
 
 **Architecture Summary:**
 This architecture utilizes an event loop (main thread) at the front and performs asynchronous I/O at the kernel level. By not directly associating connections and threads, this model needs only a main event loop thread and many fewer (kernel) threads to perform I/O. Because there are fewer threads and consequently less context-switching, it uses less memory and also less CPU.
+
+Advantages of Node.js
+---------------------
+**Savings in I/O cost (i.e., high performance): **
+Because of the architecture, Node.js provides high performance like Nginx server as shown below. (As a side note: Nginx uses evented, non-blocking architecture, where as Apache uses multi-threaded architecture. Nginx doesn’t use Node.js, this is just an architecture comparison).
