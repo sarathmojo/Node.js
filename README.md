@@ -63,3 +63,17 @@ Disadvantages of Node.js
 * Asynchronous and event-driven code inherently adds more complexity to the code versus a synchronous code.
 
 * JavaScript has more than its share of “bad parts” and might throw off engineers and newcomers. (Side note: Read some good JavaScript books like: JavaScript: The Good Parts if you are a newcomer.)
+
+When to use Node.js:
+--------------------
+* Build a (soft) real-time social app like Twitter or a chat app.
+* Build high-performance, high I/O, TCP apps like proxy servers, PaaS, databases, etc.
+* Build backend logging and processing apps.
+* Build great CLI apps similar to vmc-tool, and build tools such as ant or Make.
+* Add a RESTful API-based web server in front of an application server.
+
+When not to use Node.js:
+------------------------
+* Mission-critical (hard) real-time apps like heart monitoring apps or those that are CPU-intensive.
+* For simple CRUD apps that don’t have any real-time or high-performance needs, Node.js does not provide much of an advantage over other languages.
+* Enterprise apps that might need some specific libraries for which there may not be a Node.js library yet. (However, you could build a polyglot app that uses Java in conjunction to Node.js to help with libraries.)
