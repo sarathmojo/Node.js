@@ -38,5 +38,5 @@ This architecture utilizes an event loop (main thread) at the front and performs
 
 Advantages of Node.js
 ---------------------
-**Savings in I/O cost (i.e., high performance): **
+**Savings in I/O cost (i.e., high performance):**
 Because of the architecture, Node.js provides high performance like Nginx server as shown below. (As a side note: Nginx uses evented, non-blocking architecture, where as Apache uses multi-threaded architecture. Nginx doesn’t use Node.js, this is just an architecture comparison).
